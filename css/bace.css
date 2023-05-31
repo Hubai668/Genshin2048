@@ -1,0 +1,292 @@
+/* 通配 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fff;
+    /* background-image: url(../images/大背景.jpg); */
+    /* background-size: cover; */
+}
+
+/* 左边区域 */
+.xiao {
+    position: absolute;
+    top: 20px;
+    width: 400px;
+    left: 40px;
+    height: 700px;
+}
+
+.xiao img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 右边区域 */
+.paimon {
+    position: absolute;
+    top: 20px;
+    width: 400px;
+    right: 40px;
+    height: 700px;
+    opacity: 0.6;
+}
+
+.paimon img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 整个游戏区域 */
+.container {
+    width: 700px;
+    height: 700px;
+    /* background-color: pink; */
+    margin: 0px auto;
+    position: relative;
+}
+
+/* 游戏边框 */
+.container .game-area {
+    width: calc(505px * 1.2);
+    height: calc(518px * 1.2);
+    /* background-color: blue; */
+    position: absolute;
+    left: 50px;
+    top: 0px;
+    background-image: url(../images/边框.png);
+    background-size: 100%;
+    background-position: 50% 50%;
+    z-index: 1000;
+}
+
+/* 游戏内部区域 */
+.container .game-area .game {
+    width: 540px;
+    height: 540px;
+    /* background-color: skyblue; */
+    background-image: url(../images/gameBgimg.jpg);
+    background-size: cover;
+    position: absolute;
+    left: calc(50% - 268px);
+    top: 42px;
+}
+
+/* 设置图片容器的居中 */
+.img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 重新开始的按钮的样式 */
+.restart {
+    width: 200px;
+    height: 60px;
+    position: absolute;
+    left: calc(50% - 100px);
+    bottom: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    background-color: #dce2f2;
+    cursor: pointer;
+}
+
+.restart:hover {
+    background-color: #edecfa;
+}
+
+/* 设置棋盘大小的样式 */
+.setchesssize {
+    width: 260px;
+    height: 260px;
+    position: absolute;
+    top: 200px;
+    right: 100px;
+    text-align: center;
+    color: #193f94;
+    font-weight: 700;
+    z-index: 10;
+}
+
+.setchesssize p {
+    display: inline-block;
+    text-align: center;
+}
+
+.setchesssize input {
+    width: 150px;
+}
+
+/* 设置得分模板的大小 */
+.setscore {
+    width: 260px;
+    height: 200px;
+    position: absolute;
+    text-align: center;
+    top: 350px;
+    right: 100px;
+    z-index: 10;
+    color: #193f94;
+    font-weight: 700;
+    /* background-color: pink; */
+}
+
+.score {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 30px;
+    text-align: center;
+}
+
+/* 整个遮罩层 */
+.shadow {
+    position: absolute;
+    z-index: 1010;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.shadow .shadow-load {
+    position: absolute;
+    z-index: 1011;
+    width: 300px;
+    height: 200px;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    left: calc(50% - 150px);
+    top: calc(50% - 100px);
+}
+
+/* 预加载的图片样式 */
+.loadImg {
+    display: none;
+}
+
+.loadImg img {
+    width: 10px;
+    height: 10px;
+}
+
+/* 外挂按钮 */
+.waiguacon {
+    width: 260px;
+    height: 100px;
+    position: absolute;
+    right: 100px;
+    top: 50px;
+    z-index: 10;
+    /* background-color: pink; */
+}
+
+.waigua {
+    width: 80px;
+    height: 30px;
+    position: absolute;
+    left: calc(50% - 40px);
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: #dce2f2;
+    cursor: pointer;
+}
+
+.waigua:hover {
+    background-color: #edecfa;
+}
+
+.guawen {
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* 更选角色的元素 */
+.change-role {
+    width: 700px;
+    height: 650px;
+    position: absolute;
+    padding-top: 50px;
+    top: 20px;
+    left: 450px;
+    text-align: center;
+    /* background-color: pink; */
+    background-image: url(../images/bgimg1.jpg);
+    background-size: cover;
+    display: none;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.change-role img {
+    width: 120px;
+    height: 120px;
+    opacity: 0.5;
+}
+
+.change-role button {
+    width: 200px;
+    height: 60px;
+    position: absolute;
+    left: calc(50% - 100px);
+    bottom: 50px;
+    font-size: 18px;
+    border-radius: 10px;
+    background-color: #dce2f2;
+    cursor: pointer;
+}
+
+.change-role button:hover {
+    background-color: #edecfa;
+}
+
+audio {
+    display: none;
+}
+
+.anbo {
+    background-color: #fe0000;
+}
+
+.babala {
+    background-color: #87cefa;
+}
+
+.bannite {
+    background-color: #c51e3a;
+}
+
+.feixieer {
+    background-color: #ee82ee;
+}
+
+.keli {
+    background-color: #aa2116;
+}
+
+.hutao {
+    background-color: #d71345;
+}
+
+.xiao1 {
+    background-color: #45b97c;
+}
+
+.linghua {
+    background-color: #009ad6;
+}
+
+.qiqi {
+    background-color: #2468a2;
+}
+
+.keqing {
+    background-color: #9932cc;
+}
+
+.leishen {
+    background-color: #8a2be2;
+}

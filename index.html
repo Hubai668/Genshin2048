@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048</title>
+    <link rel="stylesheet" href="./css/bace.css">
+</head>
+
+<body>
+    <audio src="./MP3/七七.mp3" id="yuyin" controls="controls"></audio>
+    <audio src="" id="bgm" controls="controls"></audio>
+    <!-- 遮罩层 -->
+    <div class="shadow">
+        <p class="shadow-load">正在初始化中...</p>
+    </div>
+    <!-- 预加载资源 -->
+    <div class="loadImg">
+        <img src="./images/roles/0.png" alt="">
+        <audio src="./MP3/刻晴.mp3" controls="controls"></audio>
+        <audio src="./MP3/安伯.mp3" controls="controls"></audio>
+        <audio src="./MP3/班尼特.mp3" controls="controls"></audio>
+        <audio src="./MP3/魈.mp3" controls="controls"></audio>
+        <audio src="./MP3/雷神.mp3" controls="controls"></audio>
+        <audio src="./MP3/菲谢尔.mp3" controls="controls"></audio>
+        <audio src="./MP3/芭芭拉.mp3" controls="controls"></audio>
+        <audio src="./MP3/胡桃.mp3" controls="controls"></audio>
+        <audio src="./MP3/神里绫华.mp3" controls="controls"></audio>
+        <audio src="./MP3/可莉.mp3" controls="controls"></audio>
+    </div>
+    <div class="xiao">
+        <img src="./images/xiao1.jpg" alt="">
+    </div>
+    <div class="container">
+        <!-- 游戏边框 -->
+        <div class="game-area">
+            <!-- 游戏区域 -->
+            <div class="game">
+            </div>
+        </div>
+        <!-- 重新开始的按钮 -->
+        <button class="restart">重新开始</button>
+    </div>
+    <!-- 外挂 -->
+    <div class="waiguacon">
+        <p class="guawen">还在为玩不过去而烦恼吗<br>看看我</p>
+        <button id='waigua' class='waigua'>救救我</button>
+    </div>
+    <!-- 更选角色的元素 -->
+    <div class="change-role">
+        <img src="./images/roles/01.png" alt="" data-value="0">
+        <img src="./images/roles/安伯.png" alt="" data-value="2">
+        <img src="./images/roles/芭芭拉.png" alt="" data-value="4">
+        <img src="./images/roles/班尼特.png" alt="" data-value="8">
+        <img src="./images/roles/菲谢尔.png" alt="" data-value="16">
+        <img src="./images/roles/可莉.png" alt="" data-value="32">
+        <img src="./images/roles/胡桃.png" alt="" data-value="64">
+        <img src="./images/roles/魈.png" alt="" data-value="128">
+        <img src="./images/roles/神里绫华.png" alt="" data-value="256">
+        <img src="./images/roles/七七.png" alt="" data-value="512">
+        <img src="./images/roles/刻晴.png" alt="" data-value="1024">
+        <img src="./images/roles/雷神.png" alt="" data-value="2048">
+        <button id="change-done">我选好了</button>
+    </div>
+    <!-- 选择棋盘大小 -->
+    <div class="setchesssize">
+        <p>想要玩更大的棋盘吗<br>可以在这选择哦！</p>
+        <select id="select" class="form-control" style="width:212px;height:38px;">
+            <option value="4">4x4</option>
+            <option value="5">5x5</option>
+            <option value="6">6x6</option>
+            <option value="7">7x7</option>
+            <option value="8">8x8</option>
+            <option value="10">10x10</option>
+        </select>
+    </div>
+    <div class="setscore">
+        <p>你当前的得分是：</p>
+        <p class="score">10</p>
+        <p>游戏说明：<br>
+            你可以使用w a s d键来操作<br>
+            争取获得更高的分数吧！
+        </p>
+    </div>
+    <!-- 右侧的派蒙 -->
+    <div class="paimon">
+        <img src="./images/paimon.jpg" alt="">
+    </div>
+</body>
+<script src="./js/index.js"></script>
+
+</html>
